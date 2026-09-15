@@ -1,0 +1,1 @@
+In this example, our method outperforms other methods by preserving the background billboard more accurately.

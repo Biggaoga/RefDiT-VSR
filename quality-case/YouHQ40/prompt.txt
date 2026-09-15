@@ -1,0 +1,1 @@
+In this example, our method preserves street signage more clearly, including "Joma" below the storefront window and "SZECHENYI" on the billboard at the left side of the frame.

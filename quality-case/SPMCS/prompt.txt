@@ -1,0 +1,1 @@
+Our method achieves higher video fidelity; for example, the text "UTG199F" on the car is clearer than in the results of other methods.

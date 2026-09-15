@@ -1,0 +1,1 @@
+Our method uses the reference image to preserve the pattern on the person's clothing accurately.

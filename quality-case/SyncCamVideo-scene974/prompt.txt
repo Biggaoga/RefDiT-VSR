@@ -1,0 +1,1 @@
+Our method uses the man's facial appearance in the reference image to recover fine details, preserving facial similarity to the GT.

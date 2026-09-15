@@ -1,0 +1,1 @@
+Our method preserves text more faithfully than other methods, as demonstrated by the word "Welcome".
