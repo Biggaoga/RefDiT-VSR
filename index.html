@@ -1042,23 +1042,23 @@
         </div>
 
         <div class="quality-case-tabs" role="tablist" aria-label="Quality comparison cases">
-          <button class="quality-case-tab" id="quality-tab-realmcvsr" type="button" role="tab" aria-label="Quality example 1" aria-selected="true" aria-controls="quality-panel" data-quality-case="realmcvsr">
-            <img src="assets/quality/RealMCVSR-0010-thumb.jpg" alt="">
-          </button>
-          <button class="quality-case-tab" id="quality-tab-spmcs" type="button" role="tab" aria-label="Quality example 2" aria-selected="false" aria-controls="quality-panel" data-quality-case="spmcs" tabindex="-1">
+          <button class="quality-case-tab" id="quality-tab-spmcs" type="button" role="tab" aria-label="Quality example 1" aria-selected="true" aria-controls="quality-panel" data-quality-case="spmcs">
             <img src="assets/quality/SPMCS-thumb.jpg" alt="">
           </button>
-          <button class="quality-case-tab" id="quality-tab-sync" type="button" role="tab" aria-label="Quality example 3" aria-selected="false" aria-controls="quality-panel" data-quality-case="sync" tabindex="-1">
+          <button class="quality-case-tab" id="quality-tab-sync" type="button" role="tab" aria-label="Quality example 2" aria-selected="false" aria-controls="quality-panel" data-quality-case="sync" tabindex="-1">
             <img src="assets/quality/SyncCamVideo-thumb.jpg" alt="">
           </button>
-          <button class="quality-case-tab" id="quality-tab-sync974" type="button" role="tab" aria-label="Quality example 4" aria-selected="false" aria-controls="quality-panel" data-quality-case="sync974" tabindex="-1">
+          <button class="quality-case-tab" id="quality-tab-sync974" type="button" role="tab" aria-label="Quality example 3" aria-selected="false" aria-controls="quality-panel" data-quality-case="sync974" tabindex="-1">
             <img src="assets/quality/SyncCamVideo-scene974-thumb.jpg" alt="">
           </button>
-          <button class="quality-case-tab" id="quality-tab-udm" type="button" role="tab" aria-label="Quality example 5" aria-selected="false" aria-controls="quality-panel" data-quality-case="udm" tabindex="-1">
+          <button class="quality-case-tab" id="quality-tab-udm" type="button" role="tab" aria-label="Quality example 4" aria-selected="false" aria-controls="quality-panel" data-quality-case="udm" tabindex="-1">
             <img src="assets/quality/UDM-008-thumb.jpg" alt="">
           </button>
-          <button class="quality-case-tab" id="quality-tab-youhq" type="button" role="tab" aria-label="Quality example 6" aria-selected="false" aria-controls="quality-panel" data-quality-case="youhq" tabindex="-1">
+          <button class="quality-case-tab" id="quality-tab-youhq" type="button" role="tab" aria-label="Quality example 5" aria-selected="false" aria-controls="quality-panel" data-quality-case="youhq" tabindex="-1">
             <img src="assets/quality/YouHQ40-thumb.jpg" alt="">
+          </button>
+          <button class="quality-case-tab" id="quality-tab-realmcvsr" type="button" role="tab" aria-label="Quality example 6" aria-selected="false" aria-controls="quality-panel" data-quality-case="realmcvsr" tabindex="-1">
+            <img src="assets/quality/RealMCVSR-0010-thumb.jpg" alt="">
           </button>
         </div>
 
@@ -1067,7 +1067,7 @@
           <p class="quality-prompt-text" id="qualityPrompt"></p>
         </div>
 
-        <div id="quality-panel" role="tabpanel" aria-labelledby="quality-tab-realmcvsr">
+        <div id="quality-panel" role="tabpanel" aria-labelledby="quality-tab-spmcs">
           <div class="quality-strip-shell" id="qualityStripShell" tabindex="0" aria-label="Scrollable method comparison">
             <div class="quality-strip" id="qualityStrip"></div>
           </div>
@@ -1340,13 +1340,6 @@
         spark: { key: 'spark', label: 'SPARK', kind: 'baseline' }
       };
       const qualityCases = {
-        realmcvsr: {
-          folder: 'RealMCVSR-0010',
-          width: 720,
-          height: 1280,
-          prompt: 'Our method preserves text more faithfully than other methods, as demonstrated by the word "Welcome".',
-          methods: [sharedQualityMethods.c2, sharedQualityMethods.flash, sharedQualityMethods.refvsr, sharedQualityMethods.seedvr2]
-        },
         spmcs: {
           folder: 'SPMCS',
           width: 960,
@@ -1381,6 +1374,13 @@
           height: 1080,
           prompt: 'In this example, our method preserves street signage more clearly, including "Joma" below the storefront window and "SZECHENYI" on the billboard at the left side of the frame.',
           methods: [sharedQualityMethods.dam, sharedQualityMethods.flash, sharedQualityMethods.seedvr2, sharedQualityMethods.spark]
+        },
+        realmcvsr: {
+          folder: 'RealMCVSR-0010',
+          width: 720,
+          height: 1280,
+          prompt: 'Our method preserves text more faithfully than other methods, as demonstrated by the word "Welcome".',
+          methods: [sharedQualityMethods.c2, sharedQualityMethods.flash, sharedQualityMethods.refvsr, sharedQualityMethods.seedvr2]
         }
       };
       const qualityFixedStart = [
@@ -1686,7 +1686,7 @@
         });
       });
 
-      loadQualityCase('realmcvsr', qualityCaseTabs[0]);
+      loadQualityCase('spmcs', qualityCaseTabs[0]);
 
       const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
       const navSections = navLinks.map((link) => document.querySelector(link.getAttribute('href')));
